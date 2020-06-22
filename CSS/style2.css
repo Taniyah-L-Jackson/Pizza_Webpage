@@ -1,0 +1,109 @@
+/* Body */
+
+.wrapper {
+    background: black;
+    color: white;
+}
+
+/* Nav */
+
+nav {
+    background: #B89300;
+}
+
+nav ul {
+    padding: 0px;
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0px 15px;
+    display: inline;
+}
+
+.bar {
+    margin-top: 0px;
+    border: 3px solid #7A6200;
+}
+
+/* Hero */
+
+.hero h1 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.hero img {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero ul {
+    margin: 20px 0px;
+    padding: 0px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.hero li {
+    display: inline;
+}
+
+.hero button {
+    height: 15px;
+    width: 15px;
+    border: none;
+    border-radius: 50%;
+    background: #E4BE25;
+}
+
+.hero button:hover {
+    background: #7A6200;
+}
+
+/* Ribbons and Middle Text */
+
+.ribbon {
+    padding: 10px;
+    background: green;
+    border: 5px solid darkgreen;
+}
+
+.triangle {
+    position: absolute;
+    border: 40px solid transparent;
+}
+
+.miniTriangle {
+    position: absolute;
+    border: 25px solid transparent;
+}
+
+.triangleA {
+    left: 347px;
+    border-right: 50px solid black;
+}
+
+.miniTriangleA {
+    left: 346px;
+}
+
+.triangleB {
+    right: 347px;
+    border-left: 50px solid black;
+}
+
+.miniTriangleB {
+    right: 350px;
+    border-left: 53px solid darkgreen;
+}
+
+/* Footer */
+
+footer {
+    background: #B89300;
+}

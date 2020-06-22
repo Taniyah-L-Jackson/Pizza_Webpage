@@ -1,0 +1,144 @@
+body {
+    position: relative;
+    background-color: rgb(34, 30, 10);
+    /*colors the backgound of the page*/
+    /*background: blue;*/
+    /*exact same, different look*/
+    border: 10px 
+}
+
+
+
+h1, h2, h3 {
+    text-align: center;
+    /*moves the entire text*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*Edits font type*/
+    font-size: 30px;
+    /*edits font size and block size*/
+    /*font-weight: bold;*/
+    /* bolds text*/
+    font-style: italic;
+    /*slants text*/
+    background: linear-gradient(180deg, rgb(129, 111, 7), rgb(100, 86, 9), rgb(17, 15, 1));
+    /*colors the background of the text (the block)*/
+    color: rgb(161, 147, 35);
+    /*colors the text itself*/
+    border: 5px outset rgb(68, 59, 5);
+    /* Takes in only 3 values: size (mainly in px), type (ex: solid-line, dotted, etc.), and color. DO NOT ADD COMMAS*/
+    padding: 20px;
+
+}
+
+h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-style: italic;
+    color: rgb(136, 136, 136);
+
+}
+
+ul {
+    color: rgb(192, 166, 17);
+    font-size: 25px;
+}
+
+p {
+    color: rgb(192, 166, 17);
+    font-size: 30px;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(236, 218, 115);
+    font-size: 30px;
+}
+
+.login {
+    position: relative;
+    background: linear-gradient(45deg, rgb(37, 32, 3),rgb(150, 129, 12), rgb(43, 37, 5));
+    font-size: 30px;  
+}
+
+.hero {
+    border: 10px solid rgb(133, 116, 25);
+    width: 300px;
+    height: 300px;
+    margin: 5px 5px -210px 5px;
+}
+
+.titleofVid {
+    margin-top: 230px;
+    margin-bottom: 0px;
+    
+}
+.video{
+    border: 10px solid rgb(133, 116, 25);
+    width: 560px;
+    height: 315px;
+    /*margin: -470px 5px 10px 500px;*/
+}
+
+.location {
+    color: rgb(165, 127, 32);
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.specialties {
+    color: gray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+.originals {
+    position: relative;
+    margin: 0px 0px 500px 0px;
+    color: rgb(148, 124, 6);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+.block {
+    position: absolute;
+}
+
+.pizzaChoice {
+    top: 50px;
+    left: 20px;
+}
+
+.drinkChoice {
+    top: 350px;
+    left: 20px;
+}
+
+.extras {
+    top: 85px;
+    right: 400px;
+}
+
+.desserts {
+    top: 350px;
+    right: 400px;
+
+}
+
+.choose {
+    
+    /*border: 5px solid red;*/
+    /*margin: 500px 0px;*/
+    color: gray;
+    font-size: 30px;
+}
+
+.coupons {
+    color: rgb(148, 124, 6);
+    font-size: 30px;
+}
+
+.beginnings {
+    color: grey;
+    font-size: 30px;
+}
