@@ -13,6 +13,7 @@ nav {
 }
 
 nav h1 {
+    margin: 15px 0px;
     padding: 5px 15px;
     border-radius: 10px;
     background: #7A6200;
@@ -70,14 +71,14 @@ nav .fas {
 }
 
 .bar {
-    margin-top: 0px;
+    margin: 0px;
     border: 3px solid #7A6200;
 }
 
 /* Hero */
 
 .hero h1 {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 30px;
     font-size: 50px;
     font-family: SSPLtIt;
@@ -85,10 +86,15 @@ nav .fas {
     text-decoration: underline;
 }
 
-.hero img {
-    height: 600px;
+.slider {
+    height: 500px;
     width: 100%;
-    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.hero img {
+    height: max-content;
+    width: 100%;
 }
 
 .hero ul {
