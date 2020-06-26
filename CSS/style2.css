@@ -190,6 +190,7 @@ nav .fas {
 }
 
 .middleTextBar {
+    padding-left: 60px;
     width: 400px;
 }
 
@@ -722,4 +723,23 @@ footer .submitBtn:hover {
     footer .infoFour {
         margin-top: 25px;
     }
+}
+
+@media (min-width: 1280px) {
+
+    /* Ribbons and Middle Text */
+
+    /* For Each Triangle */
+    /* --Left Triangle */
+
+    .triangleA {
+        left: 380px;
+    }
+
+    /*--Right Triangle */
+
+    .triangleB {
+        right: 380px;
+    }
+
 }
