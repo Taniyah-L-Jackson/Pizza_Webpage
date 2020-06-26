@@ -1,5 +1,9 @@
 /* Body */
 
+*:focus {
+    outline: none; /*Removes focus outline*/
+}
+
 .wrapper {
     background: rgb(10, 10, 10);
     color: white;
@@ -11,6 +15,18 @@
 nav {
     background: #B89300;
 }
+
+/* For Smaller Devices: */
+
+.mainMenu {
+    display: block;
+}
+
+.dropDown {
+    display: none;
+}
+
+/* END */
 
 nav h1 {
     margin: 15px 0px;
@@ -36,7 +52,7 @@ nav li {
 
 nav a {
     color: white;
-    font-size: 25px
+    font-size: 23px
 }
 
 nav a:hover {
@@ -93,8 +109,18 @@ nav .fas {
 }
 
 .hero img {
-    height: max-content;
+    height: inherit; /*Fit imgs in slider*/
     width: 100%;
+}
+
+/* The Slider (CSS Part) */
+
+.fading {
+    animation-name: fade-in;
+    animation-duration: 2.99s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0
 }
 
 .hero ul {
@@ -124,50 +150,52 @@ nav .fas {
 
 /* Ribbons and Middle Text */
 .ribbon {
+    width: 356px;
     padding: 11px;
-    border: 3px solid #7A6200;
     background: #B89300;
     font-size: 25px;
     text-align: center;
+    z-index: 1;
+}
+
+.ribbonB { /*For Outer Ribbon*/
+    float: right
 }
 
 .ribbon a {
     color: white;
 }
 
+/* --For Both Triangles*/
+
 .triangle {
     position: absolute;
     border: 31px solid transparent;
+    border-top: 27px solid #B89300;
+    border-bottom: 30px solid #B89300;
+    z-index: 0;
 }
 
-.miniTriangle {
-    position: absolute;
-    border: 31px solid transparent;
-}
+/* For Each Triangle */
+/* --Left Triangle */
 
 .triangleA {
-    left: 365px;
-    border-right: 47px solid rgb(10, 10, 10);
+    left: 380px;
 }
 
-.miniTriangleA {
-    left: 360px;
-    border-right: 45px solid #7A6200;
-}
+/*--Right Triangle */
 
 .triangleB {
-    right: 365px;
-    border-left: 47px solid rgb(10, 10, 10);
+    right: 380px;
 }
 
-.miniTriangleB {
-    right: 360px;
-    border-left: 45px solid #7A6200;
+.middleTextBar {
+    width: 400px;
 }
 
 .middleText {
     margin: 0px;
-    padding: 5px 0px;
+    padding: 6px 0px;
     font-size: 35px;
     text-align: center;
     text-decoration: underline;
@@ -225,7 +253,6 @@ nav .fas {
 
 .mainA h3 {
     padding: 10px;
-    border: 3px solid #7A6200;
     background: #B89300;
     font-style: italic;
     text-align: center;
@@ -237,13 +264,16 @@ nav .fas {
     font-size: 18px;
 }
 
+.mainA .infoFour {
+    display: none;
+}
+
 /* BDB */
 
 .bdb {
     margin-top: 60px;
     margin-bottom: 80px;
     background: #B89300;
-    border: 4px solid #7A6200;
     border-radius: 50px;
     font-size: 35px;
     text-align: center;
@@ -285,22 +315,25 @@ nav .fas {
     background: #2B2A26;
 }
 
-.noPaddingRt {
-    padding-right: 0px;
-}
-
-.increasePdgRt {
-    padding-right: 10px;
-}
-
-.noPaddingLt {
+/* --for Second Main Left Image */
+.LtImg {
     padding-left: 0px;
 }
 
-.increasePdgLt {
-    padding-left: 20px;
+/* for Second Main Left Text */
+.LtTxt {
+    padding-right: 10px;
 }
 
+/* --for Second Main Right Image */
+.RtImg {
+    padding-right: 0px;
+}
+
+/* --for Second Main Right Text */
+.RtImg {
+    padding-left: 20px;
+}
 
 .mainB img {
     height: 300px;
@@ -328,14 +361,22 @@ footer .padding {
     padding-bottom: 90px;
 }
 
-footer .fab {
-    width: 20px;
-    padding-right: 15px;
-}
-
 footer ul {
     padding: 0px;
     list-style-type: none;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer .fab {
+    width: 20px;
+    padding-right: 15px;
 }
 
 footer input {
@@ -362,4 +403,323 @@ footer .submitBtn:hover {
     background: black;
     color: white;
     text-decoration: none;
+}
+
+/* keynotes */
+
+@keyframes fade-in {
+    100% {
+        opacity: 1
+    }
+}
+
+/* Media Queries */
+
+@media (min-width: 425px) and (max-width: 767px) {
+
+    /* Nav Section */
+
+    nav li {
+        padding: 0px 13px;
+    }
+
+    nav h1 {
+        padding: 6px 15px;
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 23px;
+    }
+
+    nav .fas { /*For DropDown*/
+        padding-top: 10px;
+        padding-right: 0px;
+    }
+
+    .mainMenu { /* Doesnt Show on small Devices */
+        display: none;
+    }
+    
+    /* Dropdown */
+
+    .dropDown {
+        display: block;
+    }
+
+    .dropBtn {
+        padding: 0px;
+        border: none;
+        background: none;
+    }
+
+    .dropBtn .fas {
+        padding: 16px 0px;
+        color: white;
+        font-size: 30px;
+    }
+    
+    .dropDown-content {
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+        display: none;
+    }
+    
+    .dropDown-content a {
+        padding: 12px 16px;
+        color: black;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropDown:active .dropdown-content {
+        display: block;
+    }
+
+    nav .search { /*Doesnt show on small devices*/
+        display: none;
+    }
+
+    /* hero Section */
+
+    .slider {
+        height: 300px;
+    }
+
+    .hero h1 {
+        padding-top: 10px;
+        font-size: 45px;
+    }
+
+    .hero button {
+        display: none;
+    }
+
+    /* Ribbon and MiddleText */
+
+    .ribbon {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .adjust {
+        margin-top: 20px; /*Stop the buttons from sticking to each other*/
+        margin-bottom: 30px;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    .middleTextBar {
+        display: none;
+    }
+
+    /* First Main Section */
+
+    .mainTitleA {
+        padding: 10px 20px;
+    }
+
+    .mainA h3 {
+        margin-top: 5px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .mainA p {
+        display: none;
+    }
+
+    .dishes { /* spacing for special dishes*/
+        padding: 15px;
+    }
+
+    .buttonLt {
+        display: none;
+    }
+
+    .buttonRt {
+        display: none;
+    }
+
+    .mainA .infoThree {
+        display: none;
+    }
+
+    .mainA .infoFour {
+        display: none;
+    }
+
+    /* Big Dumb Button */
+
+    .bdb {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 0px;
+        border: 2px solid white;
+        border-radius: 10px;
+        background: transparent;
+    }
+
+    .bdb:hover {
+        background: #B89300;
+    }
+
+    /* Second Main Section */ 
+
+    .mainB {
+        display: none;
+    }
+
+    /* Footer */
+
+    footer {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    footer .padding {
+        padding: 0px;
+    }
+
+    footer ul {
+       padding-top: 30px;
+    }
+
+    footer li {
+       padding: 0px 10px;
+       display: inline;
+    }
+
+    footer .fab {
+        margin-top: 5px;
+        margin-bottom: 30px;
+        padding: 0px 30px;
+        text-align: left;
+    }
+
+    footer span { /*Shows icons only*/
+        display: none;
+    }
+
+    footer .infoThree {
+        display: none;
+    }
+
+    footer .infoFour { /*Resturant Location*/
+        display: none;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    /* Nav Section */
+
+    nav h1 {
+        font-size: 25px;
+    }
+
+    nav li {
+        padding-left: 0px;
+    }
+
+    nav input {
+        padding: 3px;
+        width: 80%;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    .mainMenu { /* Doesnt Show on mid and up Devices */
+        display: block;
+    }
+    
+    .dropDown {
+        display: none;
+    }
+
+    nav .search {
+        margin: 13px 0px;
+        padding: 10px;
+        display: block;
+    }
+
+    nav .fas {
+        display: none;
+    }
+
+    /* Ribbion and Middle Text */
+
+    .middleTextBar {
+        display: none;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    /* First Main Section */
+
+    .mainA button {
+        display: block;
+    }
+
+    .mainA .buttonLt {
+        padding-right: 0px;
+    }
+
+    .mainA .buttonRt {
+        padding-left: 0px;
+    }
+
+    .mainA .infoOne p {
+        display: block;
+    }
+    .mainA .infoTwo p {
+        display: block;
+    }
+
+    .mainA .infoThree {
+        display: none;
+    }
+
+    .mainA .infoFour {
+        display: none;
+    }
+    /* Section Main Section */
+
+    .mainB .slotA h3 {
+        margin-top: 20%;
+    }
+
+    .mainB .slotB h3 {
+        margin-top: 50%;
+    }
+
+    .mainB .slotB {
+        margin-top: 50px;
+    }
+
+    /* Big Dumb Button */
+
+    .bdb {
+        border-radius: 50px;
+        background: #B89300;
+    }
+
+    /* Footer */
+
+    footer .infoThree {
+        margin-top: 25px;
+    }
+
+    footer .infoFour {
+        margin-top: 25px;
+    }
 }
